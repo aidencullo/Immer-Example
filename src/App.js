@@ -7,12 +7,9 @@ export default function CounterList() {
 
   function handleIncrementClick(index) {
     setCounters((c) => {
-      c.forEach((ele, i) => {
-        if (i === index) c[i] = ++ele;
-        else c[i] = 0;
-      });
+      c[index] += 1;
     });
-  }
+  };
 
   return (
     <ul>
